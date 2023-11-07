@@ -59,7 +59,9 @@ class _LoginState extends State<Login> {
                   ),
                   style: const TextStyle(color: Colors.white),
                   validator: (value) {
-                    if (value == null || value.isEmpty || !value.contains('@')) {
+                    if (value == null ||
+                        value.isEmpty ||
+                        !value.contains('@')) {
                       return 'Please enter a valid email';
                     }
                     return null;
@@ -106,7 +108,7 @@ class _LoginState extends State<Login> {
                     const SizedBox(width: 10),
                     GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Register()));
+                        Navigator.of(context).push(_createRoute());
                       },
                       child: const Text(
                         "Register here",
@@ -123,4 +125,25 @@ class _LoginState extends State<Login> {
       ),
     );
   }
+}
+
+// Animation for when navigating to Register page
+
+Route _createRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => const Register(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      var begin = const Offset(1.0, 0.0);
+      var end = Offset.zero;
+      var curve = Curves.ease;
+
+      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+      var offsetAnimation = animation.drive(tween);
+
+      return SlideTransition(
+        position: offsetAnimation,
+        child: child,
+      );
+    },
+  );
 }
