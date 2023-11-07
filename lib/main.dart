@@ -42,7 +42,7 @@
 //           200: Color(0xFFFF6E40),
 //           300: Color(0xFFFF6E40),
 //           400: Color(0xFFFF6E40),
-//           500: Color(0xFFFF6E40), 
+//           500: Color(0xFFFF6E40),
 //           600: Color(0xFFFF6E40),
 //           700: Color(0xFFFF6E40),
 //           800: Color(0xFFFF6E40),
@@ -54,12 +54,11 @@
 //   }
 // }
 
-
 import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(MyApp());

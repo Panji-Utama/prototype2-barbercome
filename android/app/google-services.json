@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "25492574005",
+    "project_id": "p2-barbercome",
+    "storage_bucket": "p2-barbercome.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25492574005:android:f25c19a8b552797cb3c67c",
+        "android_client_info": {
+          "package_name": "com.example.p2_barbercome"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDExsOQINgnjUUrTpVUT3Vo0YBF6JYAUEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
